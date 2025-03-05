@@ -32,19 +32,19 @@ const images = [
 ]
 
 export const LogoAnimation = () => {
-    return(
+    return (
         <div className="py-8 bg-purple-200/10 opacity-80">
             <div className="overflow-hidden [mask-image:linear-gradient(to_right,_transparent,_black_25%,_black_75%,_transparent)]">
                 <motion.div
-                    className="flex gap-14 flex-none pr-14"
+                    className="flex gap-10 sm:gap-14 w-full pr-14"
                     animate={{
                         translateX: '-50px',
                     }}
                     transition={{
-                        duration: 35,
+                        duration: 15, // Animación más rápida
                         repeat: Infinity,
-                        ease: "linear",
-                        reapeatType: "lopp",
+                        ease: "easeInOut",
+                        repeatType: "loop",
                     }}
                 >
                     {images.map((image, index) => (

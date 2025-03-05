@@ -1,5 +1,5 @@
 import { Contact } from "@/components/Contact";
-//import { Footer } from "@/components/Footer";
+import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { KeyMetrics } from "@/components/KeyMetrics";
 import { LogoAnimation } from "@/components/LogoAnimation";
@@ -10,16 +10,38 @@ import { Stack } from "@/components/Stack";
 
 export default function Home() {
     return (
-        <>
-          <Navbar/>
-          <Hero/>
-          <Stack/>
-          <LogoAnimation/>
-          <Portfolio/>
-          <KeyMetrics/>
-          <Services/>
-          <Contact/>
-          {/*<Footer/>*/}
-        </>
+        <div className="text-white">
+            <Navbar />
+
+            <section className="py-16 px-4 sm:px-8 lg:px-16 xl:px-32">
+                <Hero />
+            </section>
+
+            <section className="py-16 px-4 sm:px-8 lg:px-16 xl:px-32">
+                <Stack />
+            </section>
+
+            <section className="py-16 px-4 sm:px-8 lg:px-16 xl:px-32">
+                <LogoAnimation />
+            </section>
+
+            <section className="py-16 px-4 sm:px-8 lg:px-16 xl:px-32">
+                <Portfolio />
+            </section>
+
+            <section className="py-16 px-4 sm:px-8 lg:px-16 xl:px-32">
+                <KeyMetrics />
+            </section>
+
+            <section className="py-16 px-4 sm:px-8 lg:px-16 xl:px-32">
+                <Services />
+            </section>
+
+            <section className="py-16 px-4 sm:px-8 lg:px-16 xl:px-32">
+                <Contact />
+            </section>
+
+            <Footer />
+        </div>
     );
 }

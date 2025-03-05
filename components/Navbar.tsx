@@ -49,8 +49,8 @@ export const Navbar = () => {
             </div>
 
             <div
-                className={`fixed left-0 top-0 w-full h-full bg-black/90 transform transition-transform duration-300
-                            ${nav ? 'translate-x-0' : 'translate-x-full'}`}
+                className={`fixed left-0 top-0 w-full h-full bg-black/90 transition-all duration-300
+                            ${nav ? "block opacity-100" : "hidden opacity-0"}`}
             >
                 <ul className="flex flex-col items-center justify-center space-y-8 h-full">
                     {navLinks.map((link, index) => (
