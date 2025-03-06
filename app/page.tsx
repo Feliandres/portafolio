@@ -6,6 +6,7 @@ import { LogoAnimation } from "@/components/LogoAnimation";
 import { Navbar } from "@/components/Navbar";
 import { Portfolio } from "@/components/Portfolio";
 import { Services } from "@/components/Services";
+import { Skills } from "@/components/Skills";
 import { Stack } from "@/components/Stack";
 
 export default function Home() {
@@ -19,6 +20,10 @@ export default function Home() {
 
             <section className="py-16 px-4 sm:px-8 lg:px-16 xl:px-32">
                 <Stack />
+            </section>
+
+            <section className="py-16 px-4 sm:px-8 lg:px-16 xl:px-32">
+                <Skills />
             </section>
 
             <section className="py-16 px-4 sm:px-8 lg:px-16 xl:px-32">
