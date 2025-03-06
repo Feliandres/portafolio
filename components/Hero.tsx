@@ -1,6 +1,5 @@
 "use client"
 
-import { FiArrowRight } from "react-icons/fi";
 import React, { useEffect } from "react";
 import Image from "next/image";
 import { motion, useMotionTemplate, useMotionValue, animate } from "framer-motion";
@@ -27,9 +26,9 @@ export const Hero = () => {
 
     return (
         <section
-            className="relative grid min-h-screen w-full place-content-center overflow-hidden px-4 py-24 text-gray-200"
+            className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden px-6 py-20 text-gray-200"
         >
-            <div className="z-10 flex flex-col items-center">
+            <div className="z-10 flex flex-col items-center text-center">
                 <h1 className="text-white/40 text-5xl font-black md:text-7xl">
                     Hi, I am
                 </h1>
@@ -53,10 +52,10 @@ export const Hero = () => {
                     ]}
                     speed={50}
                     repeat={Infinity}
-                    className="font-bold text-gray-400 text-xl md:text-5xl italic mb-4"
+                    className="font-bold text-gray-400 text-3xl text-center sm:text-2xl md:text-4xl italic mb-4"
                 />
 
-                <div className="flex gap-6 flex-row textl-4xl md:text-6xl text-white z-20 my-5">
+                <div className="flex gap-6 flex-row text-4xl md:text-6xl text-white z-20 my-5">
                     <motion.a
                         whileHover={{ scale: 1.2 }}
                         href="https://github.com"
@@ -98,7 +97,6 @@ export const Hero = () => {
                         className="flex w-fit items-center gap-2 rounded-full px-8 py-2"
                     >
                         Download CV
-                        <FiArrowRight />
                     </motion.button>
                 </motion.a>
             </div>
