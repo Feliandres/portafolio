@@ -90,43 +90,48 @@ export const Skills = () => {
             id="skills"
             className="container mx-auto px-4 py-16 sm:py-32 text-white"
         >
+            {/* TÍTULO */}
             <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
-                className="text-7xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-12 text-center"
+                className="text-5xl sm:text-6xl md:text-7xl font-bold mb-12 text-center text-gray-200"
             >
                 Skills
             </motion.h2>
 
+            {/* SUBTÍTULO */}
             <motion.p
                 initial={{ opacity: 0 }}
                 animate={isInView ? { opacity: 1 } : { opacity: 0 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
-                className="text-center text-lg md:text-xl mb-8"
+                className="text-center text-lg md:text-xl text-gray-400 mb-8"
             >
                 I worked on various frontend and fullstack projects. Check them{" "}
-                <a href="#" className="underline text-purple-400">there</a>.
+                <a href="#" className="underline text-gray-300 hover:text-white transition">here</a>.
             </motion.p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto justify-center">
+            {/* CONTENEDOR DE SKILLS */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto justify-center">
                 {skills.map((skill, index) => (
                     <motion.div
                         key={index}
                         initial={{ opacity: 0, y: 20 }}
                         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                         transition={{ delay: 0.4 + index * 0.1, duration: 0.6 }}
-                        className="border border-purple-900 p-6 md:p-6 lg:p-6 rounded-lg bg-purple-900/20 shadow-lg flex flex-col items-center justify-center"
+                        className="border border-gray-700 p-6 md:p-6 lg:p-6 rounded-lg bg-gray-800/40 shadow-lg shadow-gray-900 flex flex-col items-center justify-center"
                     >
+                        {/* CATEGORÍA */}
                         <motion.h3
                             initial={{ scale: 0.5 }}
                             animate={isInView ? { scale: 1 } : { scale: 0.5 }}
                             transition={{ delay: 0.6 + index * 0.1, duration: 0.4, type: "spring" }}
-                            className="text-2xl md:text-3xl lg:text-4xl font-bold text-purple-300 mb-6 text-center"
+                            className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-300 mb-6 text-center"
                         >
                             {skill.category}
                         </motion.h3>
 
+                        {/* LISTA DE TECNOLOGÍAS */}
                         <ul className="space-y-4">
                             {skill.technologies.map((tech, techIndex) => (
                                 <motion.li
@@ -134,9 +139,14 @@ export const Skills = () => {
                                     initial={{ opacity: 0, scale: 0.8 }}
                                     animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
                                     transition={{ delay: 0.8 + techIndex * 0.1, duration: 0.4 }}
-                                    className="flex items-center space-x-4 text-lg md:text-xl"
+                                    className="flex items-center space-x-4 text-lg md:text-xl text-gray-300"
                                 >
-                                    <motion.span whileHover={{ scale: 1.2 }} className="text-3xl md:text-4xl lg:text-5xl">
+                                    {/* ICONO EN BLANCO O NEGRO */}
+                                    <motion.span
+                                        whileHover={{ scale: 1.2 }}
+                                        className="text-3xl md:text-4xl lg:text-5xl"
+                                        style={{ color: tech.name === "Next.js" || tech.name === "Prisma" ? "black" : "white" }}
+                                    >
                                         {tech.icon}
                                     </motion.span>
                                     <span>{tech.name}</span>

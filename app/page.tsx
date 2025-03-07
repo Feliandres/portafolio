@@ -1,5 +1,6 @@
 import { About } from "@/components/About";
 import { Contact } from "@/components/Contact";
+import { Experience } from "@/components/Experience";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { KeyMetrics } from "@/components/KeyMetrics";
@@ -33,6 +34,10 @@ export default function Home() {
 
             <section className="py-16 px-4 sm:px-8 lg:px-16 xl:px-32">
                 <About />
+            </section>
+
+            <section className="py-16 px-4 sm:px-8 lg:px-16 xl:px-32">
+                <Experience />
             </section>
 
             <section className="py-16 px-4 sm:px-8 lg:px-16 xl:px-32">
