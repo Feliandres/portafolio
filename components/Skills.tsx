@@ -94,7 +94,7 @@ export const Skills = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
-                className="text-5xl md:text-4xl lg:text-7xl font-bold mb-12 text-center"
+                className="text-7xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-12 text-center"
             >
                 Skills
             </motion.h2>
