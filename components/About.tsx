@@ -16,7 +16,7 @@ export const About = () => {
             </h1>
 
             {/* Grid Responsive */}
-            <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6">
 
                 {/* Tarjeta 1 */}
                 <div className="w-full bg-white/10 backdrop-blur-lg border-white/20 rounded-xl overflow-hidden p-6 flex items-center space-x-4">
