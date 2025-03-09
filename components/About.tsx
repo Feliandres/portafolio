@@ -62,9 +62,9 @@ export const About = () => {
                         className="w-20 h-20 sm:w-24 sm:h-24"
                     />
                     <div>
-                        <h2 className="text-xl sm:text-2xl font-bold text-white/80">Habilidades</h2>
+                        <h2 className="text-xl sm:text-2xl font-bold text-white/80">Hobbies</h2>
                         <p className="text-sm sm:text-lg text-white/70">
-                            Python, Java, C++, SQL Server, React, Excel, BI, Figma, liderazgo y trabajo en equipo.
+                            Leer, hacer deporte, aprender cursos de programación.
                         </p>
                     </div>
                 </div>
@@ -79,9 +79,9 @@ export const About = () => {
                         className="w-20 h-20 sm:w-24 sm:h-24"
                     />
                     <div>
-                        <h2 className="text-xl sm:text-2xl font-bold text-white/80">Habilidades</h2>
+                        <h2 className="text-xl sm:text-2xl font-bold text-white/80">Habilidades Blandas</h2>
                         <p className="text-sm sm:text-lg text-white/70">
-                            Python, Java, C++, SQL Server, React, Excel, BI, Figma, liderazgo y trabajo en equipo.
+                            Comunicación, proactivo, sociable, honesto, perseverante liderazgo y trabajo en equipo.
                         </p>
                     </div>
                 </div>
