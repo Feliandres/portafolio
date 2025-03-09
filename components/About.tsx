@@ -3,16 +3,16 @@
 import React from "react";
 import Image from "next/image";
 import book from "@/assets/book.png";
-import card from "@/assets/card.png";
+import blandas from "@/assets/blandas.png";
 import pc from "@/assets/pc.png";
-import finance from "@/assets/finance.png";
+import hobbies from "@/assets/hobbies.png";
 
 export const About = () => {
     return (
         <div className="max-w-6xl mx-auto px-6 py-12" id="about">
             {/* Título */}
             <h1 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center mb-8">
-                About <span className="text-gray-400">Me</span>
+                Acerca <span className="text-gray-400">de Mi</span>
             </h1>
 
             {/* Grid Responsive */}
@@ -55,8 +55,8 @@ export const About = () => {
                 {/* Tarjeta 3 */}
                 <div className="w-full bg-white/10 backdrop-blur-lg border-white/20 rounded-xl overflow-hidden p-6 flex items-center space-x-4">
                     <Image
-                        src={card}
-                        alt="Card"
+                        src={hobbies}
+                        alt="Hobbies"
                         width={100}
                         height={100}
                         className="w-20 h-20 sm:w-24 sm:h-24"
@@ -72,8 +72,8 @@ export const About = () => {
                 {/* Tarjeta 3 */}
                 <div className="w-full bg-white/10 backdrop-blur-lg border-white/20 rounded-xl overflow-hidden p-6 flex items-center space-x-4">
                     <Image
-                        src={finance}
-                        alt="Finance"
+                        src={blandas}
+                        alt="Habilidades Blandas"
                         width={100}
                         height={100}
                         className="w-20 h-20 sm:w-24 sm:h-24"
@@ -81,7 +81,7 @@ export const About = () => {
                     <div>
                         <h2 className="text-xl sm:text-2xl font-bold text-white/80">Habilidades Blandas</h2>
                         <p className="text-sm sm:text-lg text-white/70">
-                            Comunicación, proactivo, sociable, honesto, perseverante liderazgo y trabajo en equipo.
+                            Comunicación, proactivo, sociable, honesto, perseverante, liderazgo y trabajo en equipo.
                         </p>
                     </div>
                 </div>

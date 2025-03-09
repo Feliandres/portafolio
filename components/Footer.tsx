@@ -53,10 +53,10 @@ export const Footer = () => {
                 {/* Derechos de Autor */}
                 <div className="text-center text-gray-400 text-sm md:text-base">
                     <p>
-                        &copy; {new Date().getFullYear()} Felipe Pazmiño. All rights reserved.
+                        &copy; {new Date().getFullYear()} Felipe Pazmiño. Todos los derechos reservados.
                     </p>
                     <p>
-                        Designed and developed with 💙 by Felipe Pazmiño
+                        Diseñado y desarrollado con 💙 por Felipe Pazmiño
                     </p>
                 </div>
             </div>

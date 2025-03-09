@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useRef } from "react";
 import {
@@ -27,9 +27,7 @@ import {
     TbBrandNextjs,
     TbBrandVercel,
 } from "react-icons/tb";
-import {
-    DiMsqlServer
-} from "react-icons/di";
+import { DiMsqlServer } from "react-icons/di";
 import { motion, useInView } from "framer-motion";
 
 const skills = [
@@ -39,7 +37,7 @@ const skills = [
             { name: "HTML", icon: <FaHtml5 className="text-orange-600" /> },
             { name: "CSS", icon: <FaCss3 className="text-blue-600" /> },
             { name: "JavaScript", icon: <FaJs className="text-yellow-400" /> },
-            { name: "TypeScript", icon: < SiTypescript className="text-blue-600" /> },
+            { name: "TypeScript", icon: <SiTypescript className="text-blue-600" /> },
             { name: "Tailwind CSS", icon: <SiTailwindcss className="text-sky-600" /> },
         ],
     },
@@ -51,11 +49,10 @@ const skills = [
             { name: "GitHub", icon: <FaGithub className="text-gray-600" /> },
             { name: "Prisma", icon: <SiPrisma className="text-blue-600" /> },
             { name: "Vercel", icon: <TbBrandVercel className="text-black" /> },
-
-        ]
+        ],
     },
     {
-        category: "Data Analysis",
+        category: "Analisis de Datos",
         technologies: [
             { name: "Python", icon: <FaPython className="text-blue-600" /> },
             { name: "Pandas", icon: <SiPandas className="text-white" /> },
@@ -66,7 +63,7 @@ const skills = [
         ],
     },
     {
-        category: "Frameworks and Languages",
+        category: "Frameworks y Lenguajes",
         technologies: [
             { name: "React", icon: <FaReact className="text-blue-600" /> },
             { name: "Next.js", icon: <TbBrandNextjs className="text-black" /> },
@@ -75,7 +72,7 @@ const skills = [
             { name: "MySQL", icon: <SiMysql className="text-blue-500" /> },
         ],
     },
-]
+];
 
 export const Skills = () => {
     const ref = useRef<HTMLElement>(null);
@@ -88,16 +85,16 @@ export const Skills = () => {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 0.8 }}
             id="skills"
-            className="container mx-auto px-4 py-16 sm:py-32 text-white"
+            className="container mx-auto px-4 py-16 sm:py-32 text-white min-h-screen"
         >
             {/* TÍTULO */}
             <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
-                className="text-5xl sm:text-6xl md:text-7xl font-bold mb-12 text-center text-gray-200"
+                className="text-4xl sm:text-5xl md:text-6xl font-bold mb-12 text-center text-gray-200"
             >
-                Skills
+                Habilidades
             </motion.h2>
 
             {/* SUBTÍTULO */}
@@ -107,8 +104,8 @@ export const Skills = () => {
                 transition={{ delay: 0.4, duration: 0.6 }}
                 className="text-center text-lg md:text-xl text-gray-400 mb-8"
             >
-                I worked on various frontend and fullstack projects. Check them{" "}
-                <a href="#" className="underline text-gray-300 hover:text-white transition">here</a>.
+                He trabajado en varios proyectos frontend y fullstack. Puedes verlos{" "}
+                <a href="#" className="underline text-gray-300 hover:text-white transition">aquí</a>.
             </motion.p>
 
             {/* CONTENEDOR DE SKILLS */}
@@ -119,7 +116,7 @@ export const Skills = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                         transition={{ delay: 0.4 + index * 0.1, duration: 0.6 }}
-                        className="border border-gray-700 p-6 md:p-6 lg:p-6 rounded-lg bg-gray-800/40 shadow-lg shadow-gray-900 flex flex-col items-center justify-center"
+                        className="border border-gray-700 p-6 rounded-lg bg-gray-800/40 shadow-lg shadow-gray-900 flex flex-col items-center justify-center"
                     >
                         {/* CATEGORÍA */}
                         <motion.h3

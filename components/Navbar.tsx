@@ -1,56 +1,61 @@
-"use client"
+"use client";
 
 import Link from "next/link";
 import React, { useState } from "react";
-import { AiOutlineMenu, AiOutlineClose} from 'react-icons/ai';
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 const navLinks = [
-    { title: "About", path: "#about" },
-    { title: "Portfolio", path: "#portfolio" },
-    { title: "Stack", path: "#stack" },
-    { title: "Contact", path: "#contact" },
-]
-export const Navbar = () => {
+    { title: "Acerca de mí", path: "#about" },
+    { title: "Habilidades", path: "#skills" },
+    { title: "Experiencia", path: "#experience" },
+    { title: "Contáctame", path: "#contact" },
+];
 
+export const Navbar = () => {
     const [nav, setNav] = useState(false);
 
     const toggleNav = () => {
         setNav(!nav);
-    }
+    };
 
     const closeNav = () => {
         setNav(false);
-    }
-
+    };
 
     return (
-        <div className="z-50 fixed flex justify-center w-full text-white font-bold">
+        <header className="fixed top-0 left-0 w-full z-50 bg-black bg-opacity-70 backdrop-blur-md text-white font-bold text-2xl py-4">
+            {/* Contenedor principal */}
+            <div className="max-w-6xl mx-auto flex items-center justify-center py-4 px-4 relative">
+                {/* Barra de navegación en desktop */}
+                <div className="hidden md:flex w-full justify-center">
+                    <ul className="flex flex-wrap gap-6 justify-center">
+                        {navLinks.map((link, index) => (
+                            <li key={index}>
+                                <Link
+                                    href={link.path}
+                                    className="hover:text-gray-300 transition-all duration-300 ease-in-out"
+                                >
+                                    {link.title}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
 
-            <div className="border border-white/20 mt-8 backdrop-blur-3xl rounded-3xl hidden md:flex items-center justify-center p-2 max-w-[400px] mx-auto">
-                <ul className="flex flex-row p-2 space-x-8">
-                    {navLinks.map((link, index) => (
-                        <li key={index}>
-                            <Link
-                                href={link.path}
-                                className="transform hover:text-white/50 transition-all duration-300 ease-in-out"
-                            >
-                                {link.title}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
+                {/* Botón de menú en móvil */}
+                <div
+                    onClick={toggleNav}
+                    className="md:hidden absolute right-4 top-1/2 -translate-y-1/2 border rounded text-white/70 border-white/70 p-2 cursor-pointer"
+                >
+                    {nav ? <AiOutlineClose size={24} /> : <AiOutlineMenu size={24} />}
+                </div>
             </div>
 
+            {/* Menú móvil */}
             <div
-                onClick={toggleNav}
-                className="md:hidden absolute top-5 right-14 border rounded z-50 text-white/70 border-white/70 p-2"
-            >
-                {nav ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
-            </div>
-
-            <div
-                className={`fixed left-0 top-0 w-full h-full bg-black/90 transition-all duration-300
-                            ${nav ? "block opacity-100" : "hidden opacity-0"}`}
+                className={`md:hidden fixed top-0 left-0 w-full h-full bg-black/90 backdrop-blur-md transform transition-transform duration-300 ${
+                nav ? "translate-x-0" : "translate-x-full"
+                }`}
             >
                 <ul className="flex flex-col items-center justify-center space-y-8 h-full">
                     {navLinks.map((link, index) => (
@@ -58,7 +63,7 @@ export const Navbar = () => {
                             <Link
                                 href={link.path}
                                 onClick={closeNav}
-                                className="text-5xl"
+                                className="text-3xl hover:text-gray-300 transition"
                             >
                                 {link.title}
                             </Link>
@@ -66,7 +71,6 @@ export const Navbar = () => {
                     ))}
                 </ul>
             </div>
-
-        </div>
+        </header>
     );
-}
+};
